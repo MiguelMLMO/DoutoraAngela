@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Angela Santana | Transplante Capilar</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="./imagens/favicon.ico" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay fade-in">
+      <h1>Dra. Angela Santana</h1>
+      <div class="linha-titulo"></div>
+      <p>Tricologista, Terapêuta Capilar e Estética Avançada</p>
+      <a href="https://wa.me/5516981515772" class="btn-agendar">Agende sua consulta</a>
+    </div>
+  </section>
+
+    <!-- TRATAMENTOS CAPILARES -->
+    <section class="beneficios fade-up">
+    <div class="titulo-secao">
+        <h2>Tratamentos Capilares</h2>
+        <div class="linha-titulo"></div>
+        <p>Conheça os principais benefícios dos tratamentos realizados pela Dra. Angela Silva.</p>
+    </div>
+
+    <div class="beneficio-container">
+        <div class="beneficio-imagem">
+       
+        </div>
+        <div class="beneficio-texto">
+        <h3>Indicados para:</h3>
+        <ul>
+            <li>1 - Cabelos cacheados.</li>
+            <li>2 - Quimicamente tratados.</li>
+            <li>3 - Resecados e desedratados.</li>
+            <li>4 - Oleosidade extrema.</li>
+            <li>5 - Diferentes tipos de alopécias.</li>
+        </ul>
+        </div>
+    </div>
+    </section>
+  <!--Produtos-->
+  <section class="produtos">
+  <div class="titulo-secao">
+    <h2>Nossos Produtos</h2>
+    <p>Conheça os produtos que a Dra. Angela utiliza e os resultados que eles proporcionam.</p>
+  </div>
+  
+  <div class="grid-produtos">
+    <div class="produto-card">
+      <img src="../imagens/produto 2.jpeg" alt="Dra. Angela com Produto 1">
+      <p>Tratamentos especificos para todo tipo de cabelo.</p>
+    </div>
+    
+    <div class="produto-card">
+      <img src="../imagens/produto 3.jpeg" alt="Dra. Angela com Produto 2">
+      <p>Produtos personalizados para cada cliente.</p>
+    </div>
+    
+    <div class="produto-card">
+      <img src="../imagens/produto 1.jpeg" alt="Resultado do Produto">
+      <p>Resultado após tratamento.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox">
+    <img src="" alt="Imagem ampliada">
+  </div>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato fade-up">
+    <h2>Entre em Contato</h2>
+    <p>Agende sua consulta ou tire suas dúvidas.</p>
+    <div class="botoes">
+      <a href="https://wa.me/5516981515772" target="_blank" class="whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a href="angelaenfermeiraestetica@gmail.com" class="email">
+        <i class="fa-solid fa-envelope"></i> E-mail
+      </a>
+      <a href="https://www.instagram.com/philomenaesteticaavancada" target="_blank" class="instagram">
+        <i class="fa-brands fa-instagram"></i> Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Dra. Angela Santana | COREN: 295713 | Todos os direitos reservados</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Animação de scroll fade-up
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    document.querySelectorAll('.fade-up, .fade-in').forEach(el => observer.observe(el));
+
+    // Lightbox funcional
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.galeria-item img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.style.display = 'none');
+    document.addEventListener('keydown', e => { if(e.key === "Escape") lightbox.style.display = 'none'; });
+  </script>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a id="whatsapp-float" href="https://wa.me/5516981515772" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+</body>
+</html>
